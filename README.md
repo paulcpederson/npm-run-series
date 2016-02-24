@@ -40,6 +40,17 @@ second one
 third one
 ```
 
+You can also use npm-run-series from the Node API:
+
+```
+var npmSeries = require('npm-run-series')
+
+npmSeries(['test', 'build'], function (err) {
+  // runs `npm run test` and `npm run build`
+  // err as soon as any process exits with error code
+})
+```
+
 ## License
 
 [ISC](LICENSE)
