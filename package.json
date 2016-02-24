@@ -1,0 +1,30 @@
+{
+  "name": "npm-run-series",
+  "description": "Run a series of npm scripts sequentially.",
+  "version": "1.0.0",
+  "author": "Paul C Pederson <paul.c.pederson@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/paulcpederson/npm-run-series/issues"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/paulcpederson/npm-run-series",
+  "keywords": [
+    "all",
+    "npm",
+    "run",
+    "script"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulcpederson/npm-run-series.git"
+  },
+  "scripts": {
+    "test": "tape test/*.js | tap-spec && standard"
+  }
+}
