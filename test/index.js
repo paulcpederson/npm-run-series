@@ -39,7 +39,7 @@ test('throws an error and exits on first error', function (t) {
     t.equal(err.cmd, 'npm run error', 'Error cmd correct')
     t.equal(err.message, 'command "npm run error" exited with wrong status code "1"', 'Error message correct')
     try {
-      var copiedFile = fs.readFileSync(path.join(tmp, 'copy.txt'), 'utf8')
+      fs.readFileSync(path.join(tmp, 'copy.txt'), 'utf8')
     } catch (e) {
       t.ok(e, 'Did not run the second command')
     }

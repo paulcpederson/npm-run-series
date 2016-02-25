@@ -31,6 +31,8 @@
     "one": "mkdir -p test/tmp/",
     "two": "cp test/fixtures/copy.txt test/tmp/",
     "three": "cp test/fixtures/copy.txt test/tmp/new.txt",
-    "error": "ls -l bananas"
+    "error": "ls -l bananas",
+    "echo1": "echo 'check for this first string'",
+    "echo2": "echo 'check for this second string'"
   }
 }
