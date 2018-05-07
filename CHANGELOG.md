@@ -3,5 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## Unreleased
-* engage
+## 1.0.1
+
+- fixed testing of bin to make it less brittle
+
+## 1.0.0
+
+- first working version

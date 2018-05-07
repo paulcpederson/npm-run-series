@@ -11,11 +11,10 @@ test('Bin runs scripts', function (t) {
 })
 
 test('bin throws an error and exits on first error', function (t) {
-  t.plan(4)
+  t.plan(3)
   exec('node ./bin/npm-run-series "error" "one"', function (err, stdout, stderr) {
     t.ok(err, 'Threw an error')
     t.equal(err.code, 1, 'Error code correct')
-    t.equal(err.cmd, '/bin/sh -c node ./bin/npm-run-series "error" "one"', 'Error cmd correct')
     t.ok(err.message.indexOf('command "npm run error" exited with wrong status code "1"') > -1, 'Passed error message')
   })
 })
