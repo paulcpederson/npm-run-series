@@ -17,7 +17,7 @@ test('bin throws an error and exits on first error', function (t) {
   t.plan(3)
   exec(`node ${execPath} "error" "one"`, function (err, stdout, stderr) {
     t.ok(err, 'Threw an error')
-    t.equal(err.code, 1, 'Error code correct')
-    t.ok(err.message.indexOf('command "npm run error" exited with wrong status code "1"') > -1, 'Passed error message')
+    t.ok(err.code > 0, 'Error code correct')
+    t.ok(err.message.indexOf('command "npm run error" exited with wrong status code') > -1, 'Passed error message')
   })
 })
