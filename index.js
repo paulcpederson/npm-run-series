@@ -1,4 +1,4 @@
-var spawn = require('child_process').spawn
+var spawn = require('cross-spawn')
 var fmt = require('util').format
 
 function exec (cmd, cb) {

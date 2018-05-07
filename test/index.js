@@ -1,7 +1,7 @@
 var fs = require('fs')
 var path = require('path')
 var test = require('tape')
-var series = require('../')
+var series = require('..')
 var rimraf = require('rimraf')
 
 var tmp = path.join(process.cwd(), 'test', 'tmp')

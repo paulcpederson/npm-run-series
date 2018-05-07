@@ -1,13 +1,14 @@
 {
   "name": "npm-run-series",
   "description": "Run a series of npm scripts sequentially.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Paul C Pederson <paul.c.pederson@gmail.com>",
   "bin": "bin/npm-run-series.js",
   "bugs": {
     "url": "https://github.com/paulcpederson/npm-run-series/issues"
   },
   "devDependencies": {
+    "mkdirp": "^0.5.1",
     "rimraf": "^2.5.2",
     "standard": "*",
     "tap-spec": "^4.0.2",
@@ -28,11 +29,14 @@
   },
   "scripts": {
     "test": "tape test/*.js | tap-spec && standard",
-    "one": "mkdir -p test/tmp/",
+    "one": "mkdirp test/tmp/",
     "two": "cp test/fixtures/copy.txt test/tmp/",
     "three": "cp test/fixtures/copy.txt test/tmp/new.txt",
     "error": "ls -l bananas",
     "echo1": "echo 'check for this first string'",
     "echo2": "echo 'check for this second string'"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
   }
 }
